@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RANDS - Página Oficial</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* FUENTES Y CUERPO */
+    body {
+      font-family: 'Metal Mania', cursive;
+      background-color: #000000;
+      color: #f2f2f2;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    a {
+      color: #ff4d4d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOCO ROJO DIFUMINADO*/
+    .foco-rojo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,0,0,0.3) 0%, transparent 70%);
+      filter: blur(100px);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      animation: moverLuz 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes moverLuz {
+      0% {
+        top: 40%;
+        left: 40%;
+      }
+      50% {
+        top: 60%;
+        left: 60%;
+      }
+      100% {
+        top: 45%;
+        left: 35%;
+      }
+    }
+
+    /* CURSOR PERSONALIZADO */
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #f00;
+      border-radius: 50%;
+      position: absolute;
+      pointer-events: none;
+      transition: transform 0.15s ease-out;
+      mix-blend-mode: difference;
+      z-index: 9999;
+    }
+
+    /* ENCABEZADO */
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(145deg, #222, #111);
+      box-shadow: 0 5px 10px #000;
+    }
+
+    header h1 {
+      font-family: 'Black Ops One', cursive;
+      font-size: 3rem;
+      color: #e60000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      letter-spacing: 2px;
+    }
+
+    /* NAVEGACIÓN */
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #ff3333;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .contenido {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* TARJETAS */
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .tarjeta {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border: 1px solid #444;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(255, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px rgba(255, 0, 0, 0.4);
+    }
+
+    /* GALERÍA */
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .galeria img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* PIE DE PÁGINA */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <!-- FOCO ROJO -->
+  <div class="foco-rojo"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>RANDS</h1>
+    <p>RUIDO, REBELDÍA Y ROCK</p>
+  </header>
+
+  <!-- MENÚ -->
+  <nav>
+    <a href="#biografia">Biografía</a>
+    <a href="#discografia">Discografía</a>
+    <a href="#conciertos">Conciertos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- BIOGRAFÍA -->
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <div class="contenido">
+        <p>RANDS nace de la energía de cinco almas rebeldes unidas por la pasión del rock. Desde sus inicios en pequeños bares hasta escenarios masivos, la banda ha crecido con un sonido potente y una actitud sin censura.</p>
+      </div>
+    </section>
+
+    <!-- DISCOGRAFÍA -->
+    <section id="discografia">
+      <h2>Discografía</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>RUIDO INTERNO (2022)</h3>
+          <p>El debut cargado de gritos, guitarras y verdad.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>ALMA EN LLAMAS (2024)</h3>
+          <p>Más maduro, más fuerte, más RANDS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCIERTOS -->
+    <section id="conciertos">
+      <h2>Próximos Conciertos</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>Bogotá - 10 Jun 2025</h3>
+          <p>Teatro Royal Center</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Medellín - 15 Jun 2025</h3>
+          <p>Plaza Mayor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <img src="https://picsum.photos/300/200?random=1" alt="Foto 1">
+        <img src="https://picsum.photos/300/200?random=2" alt="Foto 2">
+        <img src="https://picsum.photos/300/200?random=3" alt="Foto 3">
+        <img src="https://picsum.photos/300/200?random=4" alt="Foto 4">
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contenido">
+        <p>¿Quieres contratarnos o saber más? Escríbenos:</p>
+        <p><strong>Email:</strong> contacto@randsrock.com</p>
+        <p><strong>Instagram:</strong> <a href="#">@randsrock</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 RANDS. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CURSOR MOVIMIENTO -->
+  <script>
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    });
+  </script>
+</body>
+</html>
